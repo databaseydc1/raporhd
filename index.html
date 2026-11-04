@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>e-Rapor Pasien Hemodialisis — RSUD Wonosari</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-200 text-slate-800 min-h-screen flex flex-col items-center justify-start sm:py-4">
+  <div id="app" class="w-full max-w-[420px] min-h-screen sm:min-h-[720px] sm:rounded-[28px] bg-slate-100 shadow-2xl flex flex-col overflow-hidden border border-slate-300"></div>
+
+  <script>
+    const LOGO_URI = "data:image/png;base64,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";
+
+    let state = {
+      user: null,
+      isAdmin: false,
+      adminPass: '',
+      adminPatients: [],
+      adminSearch: '',
+      editingPatientNik: null,
+      activeTab: 'home',
+      editingProfile: false,
+      showPassword: false,
+      loading: false,
+      error: '',
+      infoMsg: ''
+    };
+
+    const isGas = typeof google !== 'undefined' && google.script && google.script.run;
+    const DAYS_ALL = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const AKSES_ALL = ['Fistula AV', 'Graft AV', 'Kateter'];
+    const GOL_ALL = ['A', 'B', 'AB', 'O'];
+
+    const HARI_INDO = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+    function esc(str) {
+      return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Konversi YYYY-MM-DD -> DD/MM/YYYY
+    function isoToDmy(dateStr) {
+      if (!dateStr) return '';
+      const clean = String(dateStr).trim();
+      if (/^\d{2}\/\d{2}\/\d{4}$/.test(clean)) return clean;
+      const p = clean.split('-');
+      if (p.length === 3 && p[0].length === 4) {
+        return p[2].padStart(2, '0') + '/' + p[1].padStart(2, '0') + '/' + p[0];
+      }
+      return clean;
+    }
+
+    // Konversi DD/MM/YYYY -> YYYY-MM-DD
+    function dmyToIso(dateStr) {
+      if (!dateStr) return '';
+      const clean = String(dateStr).trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(clean)) return clean;
+      const p = clean.split('/');
+      if (p.length === 3 && p[2].length === 4) {
+        return p[2] + '-' + p[1].padStart(2, '0') + '-' + p[0].padStart(2, '0');
+      }
+      return clean;
+    }
+
+    function todayDmy() {
+      const d = new Date();
+      const dd = String(d.getDate()).padStart(2, '0');
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const yyyy = d.getFullYear();
+      return dd + '/' + mm + '/' + yyyy;
+    }
+
+    window.maskDmy = function(el, previewId) {
+      let v = el.value.replace(/[^0-9]/g, '').slice(0, 8);
+      if (v.length >= 5) {
+        el.value = v.slice(0, 2) + '/' + v.slice(2, 4) + '/' + v.slice(4);
+      } else if (v.length >= 3) {
+        el.value = v.slice(0, 2) + '/' + v.slice(2);
+      } else {
+        el.value = v;
+      }
+      if (previewId) {
+        const prev = document.getElementById(previewId);
+        if (prev) prev.textContent = '📅 ' + formatTanggalIndo(el.value);
+      }
+    };
+
+    function formatTanggalIndo(dateStr) {
+      if (!dateStr) return '-';
+      const iso = dmyToIso(dateStr);
+      const parts = String(iso).trim().split('-');
+      if (parts.length === 3 && parts[0].length === 4) {
+        const y = Number(parts[0]);
+        const m = Number(parts[1]) - 1;
+        const d = Number(parts[2]);
+        const dt = new Date(y, m, d);
+        if (!isNaN(dt.getTime())) {
+          const dd = String(d).padStart(2, '0');
+          const mm = String(m + 1).padStart(2, '0');
+          return HARI_INDO[dt.getDay()] + ', ' + dd + '/' + mm + '/' + y;
+        }
+      }
+      return dateStr;
+    }
+
+    function parseJadwalArray(val) {
+      if (Array.isArray(val)) return val;
+      if (!val) return [];
+      return String(val).split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+    function computeStats(vitals) {
+      const sorted = (vitals || []).slice().sort((a, b) => String(dmyToIso(a.tanggal)).localeCompare(String(dmyToIso(b.tanggal))));
+      const enriched = sorted.map((v, i) => {
+        const pre = Number(v.bb_pre) || 0;
+        const post = v.bb_post !== '' && v.bb_post !== null && v.bb_post !== undefined ? Number(v.bb_post) : null;
+        const drop = (post !== null && pre > 0) ? Number((pre - post).toFixed(2)) : null;
+        const prev = i > 0 ? sorted[i - 1] : null;
+        const prevPost = prev && prev.bb_post !== '' && prev.bb_post !== null ? Number(prev.bb_post) : null;
+        const idwg = (prevPost !== null && pre > 0) ? Number((pre - prevPost).toFixed(2)) : null;
+        return Object.assign({}, v, { drop, idwg });
+      });
+
+      const latestMs = enriched.length ? new Date(dmyToIso(enriched[enriched.length - 1].tanggal)).getTime() : Date.now();
+      const monthRows = enriched.filter(x => {
+        const ms = new Date(dmyToIso(x.tanggal)).getTime();
+        return !isNaN(ms) ? (latestMs - ms) <= (30 * 86400000) : true;
+      });
+
+      const validDrops = monthRows.filter(x => x.drop !== null);
+      const avgDrop1M = validDrops.length ? (validDrops.reduce((s, x) => s + x.drop, 0) / validDrops.length).toFixed(2) : '0.00';
+
+      const validIdwg = monthRows.filter(x => x.idwg !== null);
+      const avgIdwg1M = validIdwg.length ? (validIdwg.reduce((s, x) => s + x.idwg, 0) / validIdwg.length).toFixed(2) : '0.00';
+
+      return {
+        reversed: enriched.slice().reverse(),
+        latest: enriched.length ? enriched[enriched.length - 1] : null,
+        avgDrop1M,
+        avgIdwg1M,
+        monthCount: monthRows.length
+      };
+    }
+
+    window.togglePasswordVisibility = function() {
+      const passEl = document.getElementById('passInput');
+      if (!passEl) return;
+      state.showPassword = !state.showPassword;
+      passEl.type = state.showPassword ? 'text' : 'password';
+      const iconContainer = document.getElementById('eyeIconBox');
+      if (iconContainer) {
+        iconContainer.innerHTML = state.showPassword
+          ? `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" /></svg>`
+          : `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`;
+      }
+    };
+
+    function render() {
+      const root = document.getElementById('app');
+
+      // 1. LAYAR LOGIN
+      if (!state.user && !state.isAdmin) {
+        root.innerHTML = `
+          <div class="flex-1 flex flex-col justify-between p-6 bg-gradient-to-b from-teal-700 via-teal-800 to-slate-900 text-white">
+            <div class="pt-6 text-center space-y-2">
+              <div class="w-20 h-20 rounded-full bg-white/15 backdrop-blur mx-auto flex items-center justify-center p-1.5 shadow-lg">
+                <img src="${LOGO_URI}" alt="Logo HD" class="w-full h-full object-contain" />
+              </div>
+              <h1 class="text-lg font-bold tracking-tight">RAPOR PASIEN<br/>HEMODIALISIS</h1>
+              <p class="text-xs text-teal-100/80">Login menggunakan NIK &amp; Password dari Perawat/Admin</p>
+            </div>
+            <form onsubmit="handleLogin(event)" class="bg-white text-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+              ${state.error ? `<div class="p-2.5 rounded-xl bg-rose-50 text-rose-600 text-xs font-medium border border-rose-200">${esc(state.error)}</div>` : ''}
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500">Username (NIK 16 Digit)</label>
+                  <span id="nikDigitInfo" class="text-[10px] font-mono text-teal-600 font-semibold">0/16 digit</span>
+                </div>
+                <input id="nikInput" type="tel" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" required oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,16);document.getElementById('nikDigitInfo').textContent=this.value.length+'/16 digit'" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 border border-slate-300 text-xs font-mono font-semibold text-slate-900 focus:outline-none focus:border-teal-600" placeholder="Masukkan 16 digit angka NIK" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Password</label>
+                <div class="relative flex items-center">
+                  <input id="passInput" type="${state.showPassword ? 'text' : 'password'}" required class="w-full pl-3.5 pr-10 py-2.5 rounded-xl bg-slate-100 border border-slate-300 text-xs font-mono font-semibold text-slate-900 focus:outline-none focus:border-teal-600" placeholder="Password dari Admin" />
+                  <button type="button" onclick="togglePasswordVisibility()" class="absolute right-2.5 text-slate-400 hover:text-slate-700 p-1" title="Lihat/Sembunyikan Password">
+                    <span id="eyeIconBox">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" ${state.loading ? 'disabled' : ''} class="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs shadow-md transition">
+                ${state.loading ? 'Memuat Rapor HD...' : 'Masuk'}
+              </button>
+            </form>
+            <div class="text-center text-[10px] text-teal-100/90 leading-relaxed px-2 pb-2">
+              Dikembangkan oleh tim inovasi unit HD RSUD Wonosari berdasarkan inovasi sebelumnya milik dr. Trisna RH
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // 1B. PORTAL ADMIN / PERAWAT HD (JIKA LOGIN DENGAN 0000000000000000 + ADMIN123)
+      if (state.isAdmin && !state.user) {
+        const kw = (state.adminSearch || '').toLowerCase();
+        const filtered = (state.adminPatients || []).filter(pt =>
+          String(pt.nama || '').toLowerCase().includes(kw) ||
+          String(pt.nik || '').toLowerCase().includes(kw)
+        );
+
+        root.innerHTML = `
+          <header class="bg-slate-900 text-white px-4 py-3 flex items-center justify-between shadow-sm">
+            <div class="flex items-center gap-2">
+              <img src="${LOGO_URI}" alt="Logo HD" class="w-7 h-7 rounded-full bg-white/15 p-0.5 object-contain" />
+              <div>
+                <h1 class="text-xs font-bold leading-tight">Portal Admin / Perawat HD</h1>
+                <p class="text-[10px] text-amber-300">Kelola Akun NIK, Password &amp; Nama Pasien</p>
+              </div>
+            </div>
+            <button onclick="state.isAdmin=false;state.user=null;render()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[10px] font-semibold">Keluar</button>
+          </header>
+
+          <main class="flex-1 p-3 space-y-3 overflow-y-auto">
+            ${state.infoMsg ? `<div class="p-2.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium">${esc(state.infoMsg)}</div>` : ''}
+            ${state.error ? `<div class="p-2.5 rounded-xl bg-rose-50 text-rose-600 border border-rose-200 text-xs font-medium">${esc(state.error)}</div>` : ''}
+
+            <form onsubmit="handleAdminAddPatient(event)" class="bg-white rounded-2xl p-3.5 shadow-sm border border-teal-200 space-y-2.5">
+              <h4 class="text-xs font-bold text-teal-900 uppercase">+ Daftarkan Akun Pasien Baru</h4>
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">1. NIK Pasien (16 Digit Angka) *</label>
+                <input id="admNewNik" type="tel" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,16)" required placeholder="16 Digit NIK Pasien" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-mono" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">2. Password (Ditentukan Admin) *</label>
+                <input id="admNewPass" type="text" required placeholder="Contoh: HD-001 atau 123456" class="w-full px-2.5 py-1.5 rounded-lg border border-amber-400 bg-amber-50/40 text-xs font-mono font-bold text-amber-900" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">3. Nama Lengkap Pasien *</label>
+                <input id="admNewNama" type="text" required placeholder="Contoh: Bp. Suryanto Wijaya" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs" />
+              </div>
+              <button type="submit" ${state.loading ? 'disabled' : ''} class="w-full py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold shadow">
+                ${state.loading ? 'Menyimpan...' : '+ Simpan Akun ke Sheet Pasien_HD'}
+              </button>
+            </form>
+
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold text-slate-700 uppercase">Daftar Pasien (${filtered.length})</h4>
+              </div>
+              <input type="text" value="${esc(state.adminSearch)}" oninput="state.adminSearch=this.value;render()" placeholder="🔍 Cari nama atau NIK pasien..." class="w-full px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-300 text-xs" />
+
+              <div class="space-y-2">
+                ${filtered.map(pt => `
+                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                    <div class="flex items-center justify-between gap-2">
+                      <div>
+                        <div class="text-xs font-bold text-slate-800">${esc(pt.nama)}</div>
+                        <div class="text-[10px] font-mono text-slate-500">NIK: ${esc(pt.nik)}</div>
+                        <div class="text-[10px] font-mono font-semibold text-amber-700">Password: ${esc(pt.password)}</div>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <button onclick="handleAdminViewPatient('${esc(pt.nik)}')" class="px-2.5 py-1 rounded-lg bg-teal-600 text-white text-[10px] font-bold">
+                          Buka Rapor
+                        </button>
+                        <button onclick="state.editingPatientNik='${esc(pt.nik)}';render()" class="px-2.5 py-1 rounded-lg bg-slate-200 text-slate-700 text-[10px] font-semibold">
+                          Ubah Pass/Nama
+                        </button>
+                      </div>
+                    </div>
+                    ${state.editingPatientNik === String(pt.nik) ? `
+                      <form onsubmit="handleAdminUpdatePatient(event, '${esc(pt.nik)}')" class="pt-2 border-t border-slate-200 space-y-1.5 text-xs">
+                        <input id="editPtNik" type="tel" inputmode="numeric" maxlength="16" value="${esc(pt.nik)}" class="w-full px-2 py-1 rounded border font-mono text-xs" placeholder="NIK" />
+                        <input id="editPtPass" value="${esc(pt.password)}" class="w-full px-2 py-1 rounded border font-mono text-xs" placeholder="Password" />
+                        <input id="editPtNama" value="${esc(pt.nama)}" class="w-full px-2 py-1 rounded border text-xs" placeholder="Nama Pasien" />
+                        <div class="flex gap-1.5">
+                          <button type="submit" class="flex-1 py-1 rounded bg-amber-600 text-white text-[10px] font-bold">Simpan Perubahan</button>
+                          <button type="button" onclick="state.editingPatientNik=null;render()" class="px-2 py-1 rounded bg-slate-200 text-slate-600 text-[10px]">Batal</button>
+                        </div>
+                      </form>
+                    ` : ''}
+                  </div>
+                `).join('') || '<p class="text-xs text-slate-400 text-center py-4">Belum ada pasien terdaftar.</p>'}
+              </div>
+            </div>
+          </main>
+        `;
+        return;
+      }
+
+      const p = state.user.profile;
+      const jadwalArr = parseJadwalArray(p.jadwal_hd);
+      const stats = computeStats(state.user.vitals);
+      let content = '';
+
+      // 2. TAB INFO HD ("DATA SAYA")
+      if (state.activeTab === 'home') {
+        if (state.editingProfile) {
+          content = `
+            <form onsubmit="handleSaveProfile(event)" class="bg-white rounded-2xl p-3.5 shadow-sm border border-teal-200 space-y-3">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <h4 class="text-xs font-bold text-teal-800 uppercase tracking-wider">DATA SAYA</h4>
+                <button type="button" onclick="state.editingProfile=false;render()" class="text-[11px] text-slate-400 hover:text-slate-600">Batal</button>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] space-y-1">
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Nama Pasien (Sesuai NIK):</span>
+                  <span class="font-bold text-slate-800">🔒 ${esc(p.nama)}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">NIK (Username):</span>
+                  <span class="font-mono font-semibold text-slate-700">${esc(p.nik)}</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div>
+                  <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">No. Rekam Medis</label>
+                  <input id="pNoRm" type="text" value="${esc(p.no_rm || '')}" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Jenis Kelamin</label>
+                  <select id="pJk" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs bg-white">
+                    <option value="Laki-laki" ${p.jk === 'Laki-laki' ? 'selected' : ''}>Laki-laki</option>
+                    <option value="Perempuan" ${p.jk === 'Perempuan' ? 'selected' : ''}>Perempuan</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Tanggal Lahir (Format DD/MM/YYYY)</label>
+                <input id="pLahir" type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" value="${esc(isoToDmy(p.tgl_lahir))}" oninput="maskDmy(this, 'pLahirPreview')" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-mono" />
+                <span id="pLahirPreview" class="block text-[10px] text-teal-700 font-medium mt-1">📅 ${esc(formatTanggalIndo(p.tgl_lahir))}</span>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-1">Golongan Darah (Pilih Opsi)</label>
+                <select id="pGol" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold bg-white text-slate-800">
+                  ${GOL_ALL.map(g => `<option value="${g}" ${String(p.gol_darah || 'O').replace(/[^A-Za-z]/g, '') === g ? 'selected' : ''}>Golongan Darah ${g}</option>`).join('')}
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-1">Jadwal Hari HD:</label>
+                <div class="grid grid-cols-3 gap-1.5">
+                  ${DAYS_ALL.map(d => `
+                    <label class="flex items-center gap-1 text-[11px] bg-slate-50 p-1.5 rounded-lg border border-slate-200 cursor-pointer">
+                      <input type="checkbox" value="${d}" class="p-jadwal-cb" ${jadwalArr.includes(d) ? 'checked' : ''} />
+                      <span>${d}</span>
+                    </label>
+                  `).join('')}
+                </div>
+                <input id="pJadwal" type="hidden" value="${esc(jadwalArr.join(', '))}" />
+              </div>
+
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Akses Vaskular</label>
+                  <select id="pAkses" class="w-full px-2 py-1.5 rounded-lg border border-slate-300 text-xs bg-white">
+                    ${AKSES_ALL.map(a => `<option value="${a}" ${p.akses_vaskular === a ? 'selected' : ''}>${a}</option>`).join('')}
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">BB Kering (kg)</label>
+                  <input id="pBbKering" type="number" step="0.1" value="${esc(p.bb_kering || '')}" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Perhatian</label>
+                <textarea id="pCatatanUmum" rows="2" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs">${esc(p.catatan_umum || '')}</textarea>
+              </div>
+
+              <button type="submit" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold shadow">
+                💾 Simpan DATA SAYA
+              </button>
+            </form>
+          `;
+        } else {
+          content = `
+            <!-- Kartu DATA SAYA -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-2.5">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 block">DATA SAYA</span>
+                  <h3 class="text-sm font-bold text-slate-900">${esc(p.nama)}</h3>
+                </div>
+                <button onclick="state.editingProfile=true;render()" class="px-2.5 py-1 rounded-lg bg-teal-50 text-teal-700 border border-teal-200 text-[10px] font-bold hover:bg-teal-100">
+                  ✏️ DATA SAYA
+                </button>
+              </div>
+              <div class="grid grid-cols-2 gap-2.5 text-[11px]">
+                <div>
+                  <span class="text-slate-400 block">No. Rekam Medis</span>
+                  <span class="font-mono font-semibold text-slate-800">${esc(p.no_rm || '-')}</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block">NIK (Username)</span>
+                  <span class="font-mono font-semibold text-slate-800">${esc(p.nik)}</span>
+                </div>
+                <div class="col-span-2 bg-slate-50 p-2 rounded-xl border border-slate-200/70 flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] text-slate-400 block">Tanggal Lahir</span>
+                    <span class="font-semibold text-slate-800">${esc(formatTanggalIndo(p.tgl_lahir))}</span>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-600 border border-rose-200">
+                    Gol. Darah: ${esc(p.gol_darah || 'O')}
+                  </span>
+                </div>
+                <div class="col-span-2">
+                  <span class="text-slate-400">Jenis Kelamin: </span>
+                  <span class="font-semibold text-slate-800">${esc(p.jk || '-')}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- I. INFORMASI HEMODIALISIS -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-3">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">I. Informasi Hemodialisis</h4>
+              </div>
+
+              <div>
+                <span class="text-[11px] font-medium text-slate-500 block mb-1.5">Jadwal Hari Hemodialisis:</span>
+                <div class="grid grid-cols-3 gap-1.5">
+                  ${DAYS_ALL.map(hari => {
+                    const active = jadwalArr.includes(hari);
+                    return `
+                      <div class="px-2 py-1.5 rounded-lg text-[11px] font-semibold text-center border ${active ? 'bg-teal-600 text-white border-teal-600 shadow-sm' : 'bg-slate-50 text-slate-400 border-slate-200'}">
+                        ${active ? '☑' : '☐'} ${hari}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div>
+                <span class="text-[11px] font-medium text-slate-500 block mb-1.5">Akses Vaskular:</span>
+                <div class="grid grid-cols-3 gap-1.5">
+                  ${AKSES_ALL.map(aks => {
+                    const isAct = (p.akses_vaskular || 'Fistula AV') === aks;
+                    return `
+                      <div class="px-2 py-1.5 rounded-lg text-[10px] font-semibold text-center border ${isAct ? 'bg-sky-600 text-white border-sky-600' : 'bg-slate-50 text-slate-400 border-slate-200'}">
+                        ${isAct ? '☑' : '☐'} ${aks}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+
+              <div class="bg-teal-50/80 border border-teal-200 rounded-xl p-3 flex items-center justify-between">
+                <div>
+                  <span class="text-[11px] font-semibold text-teal-800 block">Berat Badan Kering (Dry Weight)</span>
+                  <span class="text-[10px] text-teal-600">Patokan berat badan ideal sesudah HD</span>
+                </div>
+                <span class="text-base font-bold text-teal-900">${esc(p.bb_kering || 0)} <small class="text-xs font-normal">kg</small></span>
+              </div>
+            </div>
+
+            <!-- PERHATIAN -->
+            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-3.5 space-y-1">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 block">Perhatian</span>
+              <p class="text-xs text-amber-900 leading-relaxed">${esc(p.catatan_umum || 'Klik tombol ✏️ DATA SAYA di atas untuk melengkapi profil dan informasi HD Anda.')}</p>
+            </div>
+          `;
+        }
+      }
+
+      // 3. TAB TIMBANG BB (FORMAT TANGGAL DD/MM/YYYY)
+      else if (state.activeTab === 'vital') {
+        const latestIdwg = stats.latest && stats.latest.idwg !== null ? (stats.latest.idwg > 0 ? '+' : '') + stats.latest.idwg + ' kg' : 'Belum ada pembanding';
+        const latestDrop = stats.latest && stats.latest.drop !== null ? '-' + stats.latest.drop + ' kg' : 'Menunggu BB Post';
+        content = `
+          <div class="bg-gradient-to-br from-teal-700 to-cyan-800 text-white rounded-2xl p-3.5 shadow-md space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-200">📊 Ringkasan Berat Badan (BB)</span>
+              <span class="text-[10px] bg-white/15 px-2 py-0.5 rounded-full">BB Kering: <b>${esc(p.bb_kering || 0)} kg</b></span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="bg-white/10 backdrop-blur rounded-xl p-2.5 border border-white/15">
+                <span class="text-[10px] text-teal-100 block">Selisih BB Hari Ini vs HD Lalu</span>
+                <span class="text-sm font-bold text-amber-300 mt-0.5 block">${latestIdwg}</span>
+                <span class="text-[9px] text-teal-200 block">BB Pre Hari Ini − BB Post Lalu</span>
+              </div>
+              <div class="bg-white/10 backdrop-blur rounded-xl p-2.5 border border-white/15">
+                <span class="text-[10px] text-teal-100 block">Turun BB Saat HD Terakhir</span>
+                <span class="text-sm font-bold text-emerald-300 mt-0.5 block">${latestDrop}</span>
+                <span class="text-[9px] text-teal-200 block">BB Pre − BB Post Hari Ini</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1 border-t border-white/15">
+              <div>
+                <span class="text-[10px] text-teal-200 block">Rata-rata Kenaikan Antar-HD (1 Bln)</span>
+                <span class="text-xs font-bold text-white">+${stats.avgIdwg1M} kg <small class="font-normal opacity-75">(${stats.monthCount} sesi)</small></span>
+              </div>
+              <div>
+                <span class="text-[10px] text-teal-200 block">Rata-rata Turun Saat HD (1 Bln)</span>
+                <span class="text-xs font-bold text-white">-${stats.avgDrop1M} kg / sesi</span>
+              </div>
+            </div>
+          </div>
+
+          <form onsubmit="handleSaveVital(event)" class="bg-white rounded-2xl p-3.5 shadow-sm border border-teal-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold text-teal-900">⚖️ Input Mandiri Timbangan &amp; Tensi HD</h4>
+              <span class="text-[10px] text-teal-600 font-medium">Isi Pre dulu atau sekaligus</span>
+            </div>
+            <div>
+              <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Tanggal HD (DD/MM/YYYY)</label>
+              <input id="vTgl" type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" oninput="maskDmy(this)" required value="${todayDmy()}" class="w-full px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-300 text-xs font-mono font-semibold text-slate-800" />
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="p-2 rounded-xl bg-amber-50/70 border border-amber-200 space-y-1.5">
+                <span class="text-[10px] font-bold text-amber-800 block">1. Saat Datang (Pre HD)</span>
+                <div>
+                  <label class="block text-[9px] text-slate-500">BB Sebelum (kg) *</label>
+                  <input id="vPre" type="number" step="0.1" required placeholder="Contoh: 64.9" class="w-full px-2 py-1 rounded bg-white border border-amber-300 text-xs font-bold text-slate-900" />
+                </div>
+                <div>
+                  <label class="block text-[9px] text-slate-500">TD Sebelum (mmHg)</label>
+                  <input id="tdPre" type="text" placeholder="145/85" class="w-full px-2 py-1 rounded bg-white border border-amber-300 text-xs text-slate-900" />
+                </div>
+              </div>
+              <div class="p-2 rounded-xl bg-teal-50/70 border border-teal-200 space-y-1.5">
+                <span class="text-[10px] font-bold text-teal-800 block">2. Selesai HD (Post HD)</span>
+                <div>
+                  <label class="block text-[9px] text-slate-500">BB Sesudah (kg)</label>
+                  <input id="vPost" type="number" step="0.1" placeholder="Contoh: 62.4" class="w-full px-2 py-1 rounded bg-white border border-teal-300 text-xs font-bold text-slate-900" />
+                </div>
+                <div>
+                  <label class="block text-[9px] text-slate-500">TD Sesudah (mmHg)</label>
+                  <input id="tdPost" type="text" placeholder="128/80" class="w-full px-2 py-1 rounded bg-white border border-teal-300 text-xs text-slate-900" />
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 p-2 rounded-xl bg-sky-50/70 border border-sky-200">
+              <div>
+                <label class="block text-[9px] font-semibold text-sky-900">Target UF (Liter) — Opsional</label>
+                <input id="vUf" type="number" step="0.1" placeholder="Contoh: 2.5" class="w-full px-2 py-1 rounded bg-white border border-sky-300 text-xs text-slate-900" />
+              </div>
+              <div>
+                <label class="block text-[9px] font-semibold text-sky-900">Durasi HD (Jam) — Opsional</label>
+                <input id="vDurasi" type="number" step="0.5" placeholder="Contoh: 4" class="w-full px-2 py-1 rounded bg-white border border-sky-300 text-xs text-slate-900" />
+              </div>
+            </div>
+            <button type="submit" class="w-full py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold shadow transition">
+              + Simpan Timbangan BB &amp; Hitung Selisih
+            </button>
+          </form>
+
+          <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">Riwayat BB &amp; Selisih Antar-HD</h4>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">${stats.reversed.length} Sesi</span>
+            </div>
+            <div class="space-y-2">
+              ${stats.reversed.map(v => {
+                const idwgHtml = v.idwg !== null ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-sky-100 text-sky-800">Naik dari HD lalu: ${v.idwg > 0 ? '+' : ''}${v.idwg} kg</span>` : '';
+                const dropHtml = v.drop !== null ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">Turun HD: -${v.drop} kg</span>` : `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Sedang HD (Belum Post)</span>`;
+                const ufDurHtml = (v.uf_liter || v.durasi_jam) ? `<div class="flex items-center gap-3 pt-1 border-t border-slate-200/60 text-[10px] text-slate-600"><span>💧 Target UF: <b class="text-sky-700">${v.uf_liter ? esc(v.uf_liter) + ' L' : '-'}</b></span><span>⏱️ Durasi HD: <b class="text-indigo-700">${v.durasi_jam ? esc(v.durasi_jam) + ' Jam' : '-'}</b></span></div>` : '';
+                return `
+                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
+                    <div class="flex flex-wrap items-center justify-between gap-1 border-b border-slate-200/70 pb-1">
+                      <span class="text-xs font-bold text-slate-800">📅 ${esc(formatTanggalIndo(v.tanggal))}</span>
+                      <div class="flex flex-wrap gap-1">${idwgHtml}${dropHtml}</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                      <div>
+                        <span class="text-[10px] text-slate-400 block">Berat Badan (kg)</span>
+                        <span class="font-semibold text-slate-700">Pre: <b>${esc(v.bb_pre)}</b> &rarr; Post: <b class="text-teal-700">${v.bb_post !== null && v.bb_post !== '' ? esc(v.bb_post) : '-'}</b></span>
+                      </div>
+                      <div>
+                        <span class="text-[10px] text-slate-400 block">Tekanan Darah (mmHg)</span>
+                        <span class="font-semibold text-slate-700">${esc(v.td_pre || '-')} &rarr; <b class="text-teal-700">${esc(v.td_post || '-')}</b></span>
+                      </div>
+                    </div>
+                    ${ufDurHtml}
+                  </div>
+                `;
+              }).join('') || '<p class="text-xs text-slate-400 text-center py-6">Belum ada riwayat parameter vital.</p>'}
+            </div>
+          </div>
+        `;
+      }
+
+      // 4. TAB LAB & OBAT (FORMAT TANGGAL DD/MM/YYYY)
+      else if (state.activeTab === 'lab') {
+        content = `
+          <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">III. Parameter Laboratorium</h4>
+            <form onsubmit="handleSaveItem(event, 'lab')" class="p-2.5 rounded-xl bg-teal-50/70 border border-teal-200 space-y-2">
+              <div class="grid grid-cols-3 gap-1.5">
+                <div>
+                  <label class="block text-[9px] font-bold text-teal-900">Tanggal (DD/MM/YYYY)</label>
+                  <input id="labBulan" type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" oninput="maskDmy(this)" required value="${todayDmy()}" class="w-full px-1.5 py-1 rounded bg-white border border-teal-300 text-[11px] font-mono" />
+                </div>
+                <div>
+                  <label class="block text-[9px] font-bold text-teal-900">Hb (g/dL)</label>
+                  <input id="labHb" type="number" step="0.1" required placeholder="10.8" class="w-full px-2 py-1 rounded bg-white border border-teal-300 text-xs" />
+                </div>
+                <div>
+                  <label class="block text-[9px] font-bold text-teal-900">Trombosit (AT)</label>
+                  <input id="labAt" type="number" required placeholder="230000" class="w-full px-2 py-1 rounded bg-white border border-teal-300 text-xs" />
+                </div>
+              </div>
+              <button type="submit" class="w-full py-1.5 rounded-lg bg-teal-600 text-white text-[11px] font-bold">+ Simpan Hasil Lab Saya</button>
+            </form>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-[10px] text-slate-500 uppercase">
+                    <th class="py-1.5 px-2">Tanggal</th>
+                    <th class="py-1.5 px-2">Hemoglobin (Hb)</th>
+                    <th class="py-1.5 px-2">Trombosit (AT)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${(state.user.labs || []).map(l => `
+                    <tr class="border-b border-slate-100 last:border-b-0">
+                      <td class="py-2 px-2 font-semibold text-slate-800">${esc(formatTanggalIndo(l.tanggal || l.bulan))}</td>
+                      <td class="py-2 px-2 font-mono font-bold text-teal-700">${esc(l.hb)} g/dL</td>
+                      <td class="py-2 px-2 font-mono text-slate-700">${Number(l.trombosit || 0).toLocaleString('id-ID')} /µL</td>
+                    </tr>
+                  `).join('') || '<tr><td colspan="3" class="py-3 text-center text-slate-400">Belum ada data lab</td></tr>'}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">IV. Pengobatan Rutin</h4>
+            <form onsubmit="handleSaveItem(event, 'obat')" class="p-2.5 rounded-xl bg-sky-50/70 border border-sky-200 space-y-2">
+              <div class="grid grid-cols-2 gap-1.5">
+                <input id="obatNama" type="text" required placeholder="Nama Obat" class="px-2 py-1 rounded bg-white border border-sky-300 text-xs" />
+                <input id="obatDosis" type="text" required placeholder="Dosis (mis. 1x1)" class="px-2 py-1 rounded bg-white border border-sky-300 text-xs" />
+              </div>
+              <input id="obatKet" type="text" placeholder="Keterangan waktu minum obat..." class="w-full px-2 py-1 rounded bg-white border border-sky-300 text-xs" />
+              <button type="submit" class="w-full py-1.5 rounded-lg bg-sky-600 text-white text-[11px] font-bold">+ Tambah Obat ke Rapor</button>
+            </form>
+            <div class="space-y-2">
+              ${(state.user.medications || []).map(m => `
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-800">💊 ${esc(m.nama_obat)}</span>
+                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-sky-100 text-sky-800">${esc(m.dosis)}</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 mt-1">${esc(m.keterangan)}</p>
+                </div>
+              `).join('') || '<p class="text-xs text-slate-400 text-center py-3">Belum ada daftar obat.</p>'}
+            </div>
+          </div>
+        `;
+      }
+
+      // 5. TAB CATATAN
+      else {
+        content = `
+          <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-200/80 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700">V. Keluhan &amp; Catatan Medis</h4>
+            <form onsubmit="handleSaveItem(event, 'catatan')" class="p-3 rounded-xl bg-teal-50/70 border border-teal-200 space-y-2">
+              <label class="block text-[11px] font-bold text-teal-900">Catat Keluhan / Tindakan Saat HD:</label>
+              <input id="catKeluhan" type="text" required placeholder="Keluhan (contoh: Kram ringan / Pusing / Tidak ada)" class="w-full px-2.5 py-1.5 rounded-lg bg-white border border-teal-300 text-xs text-slate-800" />
+              <div class="grid grid-cols-2 gap-1.5">
+                <input id="catTindakan" type="text" placeholder="Tindakan (opsional)" class="w-full px-2 py-1.5 rounded-lg bg-white border border-teal-300 text-xs text-slate-800" />
+                <input id="catPetugas" type="text" placeholder="Nama Dokter/Perawat" class="w-full px-2 py-1.5 rounded-lg bg-white border border-teal-300 text-xs text-slate-800" />
+              </div>
+              <button type="submit" class="w-full py-1.5 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-[11px] font-semibold transition">+ Simpan Catatan Rapor Saya</button>
+            </form>
+            <div class="space-y-2.5">
+              ${(state.user.notes || []).map(n => `
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/90 space-y-1.5 text-xs">
+                  <div class="flex items-center justify-between text-[10px] text-slate-400 font-semibold">
+                    <span>📅 ${esc(formatTanggalIndo(n.tanggal))}</span>
+                    <span class="text-teal-700">${esc(n.petugas)}</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-400 block">Keluhan:</span>
+                    <p class="font-semibold text-slate-800">${esc(n.keluhan)}</p>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-400 block">Tindakan:</span>
+                    <p class="text-slate-700">${esc(n.tindakan)}</p>
+                  </div>
+                </div>
+              `).join('') || '<p class="text-xs text-slate-400 text-center py-4">Belum ada catatan medis.</p>'}
+            </div>
+          </div>
+        `;
+      }
+
+      root.innerHTML = `
+        <header class="bg-teal-700 text-white px-4 py-3 flex items-center justify-between shadow-sm">
+          <div class="flex items-center gap-2">
+            <img src="${LOGO_URI}" alt="Logo HD" class="w-7 h-7 rounded-full bg-white/15 p-0.5 object-contain" />
+            <div>
+              <h1 class="text-xs font-bold leading-tight">${esc(p.nama)}</h1>
+              <p class="text-[10px] text-teal-100 font-mono">NIK: ${esc(p.nik)}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            ${state.isAdmin ? `<button onclick="state.user=null;render()" class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 text-[10px] font-bold">&larr; Daftar Pasien</button>` : ''}
+            <button onclick="state.user=null;state.isAdmin=false;render()" class="px-2.5 py-1 rounded-lg bg-teal-800 hover:bg-teal-900 text-[10px] font-semibold">Keluar</button>
+          </div>
+        </header>
+        <main class="flex-1 p-3 space-y-3 overflow-y-auto">${content}</main>
+        <nav class="bg-white border-t border-slate-200 grid grid-cols-4 py-1.5 px-1 text-center">
+          <button onclick="state.activeTab='home';state.editingProfile=false;render()" class="flex flex-col items-center py-1 rounded-xl ${state.activeTab==='home'?'text-teal-600 font-bold':'text-slate-400'}">
+            <span class="text-sm">🏠</span>
+            <span class="text-[10px] mt-0.5">Info HD</span>
+          </button>
+          <button onclick="state.activeTab='vital';state.editingProfile=false;render()" class="flex flex-col items-center py-1 rounded-xl ${state.activeTab==='vital'?'text-teal-600 font-bold':'text-slate-400'}">
+            <span class="text-sm">⚖️</span>
+            <span class="text-[10px] mt-0.5">Timbang BB</span>
+          </button>
+          <button onclick="state.activeTab='lab';state.editingProfile=false;render()" class="flex flex-col items-center py-1 rounded-xl ${state.activeTab==='lab'?'text-teal-600 font-bold':'text-slate-400'}">
+            <span class="text-sm">🧪</span>
+            <span class="text-[10px] mt-0.5">Lab &amp; Obat</span>
+          </button>
+          <button onclick="state.activeTab='notes';state.editingProfile=false;render()" class="flex flex-col items-center py-1 rounded-xl ${state.activeTab==='notes'?'text-teal-600 font-bold':'text-slate-400'}">
+            <span class="text-sm">📋</span>
+            <span class="text-[10px] mt-0.5">Catatan</span>
+          </button>
+        </nav>
+      `;
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const nik = document.getElementById('nikInput').value.trim();
+      const pass = document.getElementById('passInput').value.trim();
+      if (nik.length !== 16 && nik.toUpperCase() !== 'ADMIN') {
+        state.error = 'NIK harus berjumlah 16 digit angka.';
+        render();
+        return;
+      }
+      state.loading = true; state.error = ''; state.infoMsg = ''; render();
+      if (isGas) {
+        google.script.run
+          .withSuccessHandler(res => {
+            state.loading = false;
+            if (res && res.isAdmin) {
+              state.isAdmin = true;
+              state.adminPass = pass;
+              state.adminPatients = res.patients || [];
+              state.user = null;
+            } else {
+              state.isAdmin = false;
+              state.user = res;
+            }
+            render();
+          })
+          .withFailureHandler(err => { state.loading = false; state.error = err.message; render(); })
+          .loginPasienByNik(nik, pass);
+      }
+    }
+
+    function handleAdminAddPatient(e) {
+      e.preventDefault();
+      const payload = {
+        nik: document.getElementById('admNewNik').value,
+        password: document.getElementById('admNewPass').value,
+        nama: document.getElementById('admNewNama').value
+      };
+      state.loading = true; state.error = ''; state.infoMsg = ''; render();
+      if (isGas) {
+        google.script.run
+          .withSuccessHandler(res => {
+            state.loading = false;
+            state.adminPatients = res.patients || [];
+            state.infoMsg = 'Pasien ' + payload.nama + ' berhasil didaftarkan!';
+            render();
+          })
+          .withFailureHandler(err => { state.loading = false; state.error = err.message; render(); })
+          .adminTambahPasienBaru(state.adminPass, payload);
+      }
+    }
+
+    function handleAdminUpdatePatient(e, oldNik) {
+      e.preventDefault();
+      const payload = {
+        nik: document.getElementById('editPtNik').value,
+        password: document.getElementById('editPtPass').value,
+        nama: document.getElementById('editPtNama').value
+      };
+      state.loading = true; state.error = ''; state.infoMsg = ''; render();
+      if (isGas) {
+        google.script.run
+          .withSuccessHandler(res => {
+            state.loading = false;
+            state.editingPatientNik = null;
+            state.adminPatients = res.patients || [];
+            state.infoMsg = 'Data akun pasien berhasil diperbarui!';
+            render();
+          })
+          .withFailureHandler(err => { state.loading = false; state.error = err.message; render(); })
+          .adminUpdateAkunPasien(state.adminPass, oldNik, payload);
+      }
+    }
+
+    function handleAdminViewPatient(targetNik) {
+      state.loading = true; state.error = ''; render();
+      if (isGas) {
+        google.script.run
+          .withSuccessHandler(res => {
+            state.loading = false;
+            state.user = res;
+            state.activeTab = 'home';
+            render();
+          })
+          .withFailureHandler(err => { state.loading = false; state.error = err.message; render(); })
+          .adminLihatRaporPasien(state.adminPass, targetNik);
+      }
+    }
+
+    function handleSaveProfile(e) {
+      e.preventDefault();
+      const checkedDays = [];
+      document.querySelectorAll('.p-jadwal-cb:checked').forEach(cb => checkedDays.push(cb.value));
+      const payload = {
+        no_rm: document.getElementById('pNoRm').value,
+        tgl_lahir: dmyToIso(document.getElementById('pLahir').value),
+        jk: document.getElementById('pJk').value,
+        gol_darah: document.getElementById('pGol').value,
+        jadwal_hd: checkedDays.join(', '),
+        akses_vaskular: document.getElementById('pAkses').value,
+        bb_kering: document.getElementById('pBbKering').value,
+        catatan_umum: document.getElementById('pCatatanUmum') ? document.getElementById('pCatatanUmum').value : ''
+      };
+      if (isGas) {
+        google.script.run.withSuccessHandler(res => {
+          state.user = res;
+          state.editingProfile = false;
+          render();
+        }).simpanProfilMandiri(state.user.profile.nik, payload);
+      }
+    }
+
+    function handleSaveVital(e) {
+      e.preventDefault();
+      const payload = {
+        tanggal: dmyToIso(document.getElementById('vTgl').value),
+        bb_pre: document.getElementById('vPre').value,
+        bb_post: document.getElementById('vPost').value,
+        td_pre: document.getElementById('tdPre').value,
+        td_post: document.getElementById('tdPost').value,
+        uf_liter: document.getElementById('vUf').value,
+        durasi_jam: document.getElementById('vDurasi').value
+      };
+      if (isGas) {
+        google.script.run.withSuccessHandler(res => { state.user = res; render(); }).simpanVitalMandiri(state.user.profile.nik, payload);
+      }
+    }
+
+    function handleSaveItem(e, jenis) {
+      e.preventDefault();
+      let payload = {};
+      if (jenis === 'lab') {
+        payload = { tanggal: dmyToIso(document.getElementById('labBulan').value), hb: document.getElementById('labHb').value, trombosit: document.getElementById('labAt').value };
+      } else if (jenis === 'obat') {
+        payload = { nama_obat: document.getElementById('obatNama').value, dosis: document.getElementById('obatDosis').value, keterangan: document.getElementById('obatKet').value };
+      } else {
+        payload = {
+          keluhan: document.getElementById('catKeluhan').value,
+          tindakan: document.getElementById('catTindakan').value,
+          petugas: document.getElementById('catPetugas') ? document.getElementById('catPetugas').value : 'Pasien Mandiri'
+        };
+      }
+      if (isGas) {
+        google.script.run.withSuccessHandler(res => { state.user = res; render(); }).simpanItemRaporMandiri(state.user.profile.nik, jenis, payload);
+      }
+    }
+
+    render();
+  </script>
+</body>
+</html>
